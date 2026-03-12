@@ -1,0 +1,14 @@
+---
+# Default compose file for development.
+# Should be used directly in development.
+# Automatically loads `docker-compose.override.yml` if it exists.
+
+version: "3.6"
+services:
+
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "8000:8000"
