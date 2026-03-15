@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 
 COPY wsgi.py wsgi.py
 
-CMD ["gunicorn", "wsgi:app", "--bind", "0.0.0.0:8888", "-w", "1"]
+CMD ["gunicorn", "wsgi:app", "--bind", "0.0.0.0:8000", "-w", "1"]

@@ -1,16 +1,9 @@
 version: "3.6"
 services:
 
-  nginx:
-    image: nginx:1.29.6
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    network_mode: host
-
   app:
     build:
       dockerfile: Dockerfile
-      context: .
-    network_mode: host
-    networks:
-      - app-network
+      context: app
+    ports:
+      - "8000:8000"
