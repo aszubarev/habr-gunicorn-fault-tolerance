@@ -5,7 +5,7 @@ def app(environ, start_response):
     """
     A basic WSGI application.
     """
-    sleep(0.01)
+    sleep(0.008)
     status = '200 OK'
     response_headers = [('Content-type', 'text/plain')]
     output = b'index'
