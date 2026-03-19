@@ -9,6 +9,9 @@ run_local_app_5:
 run_local_app_6:
 	@gunicorn wsgi:app --bind 127.0.0.1:8000 --control-socket /tmp/gunicorn.ctl -w 6
 
+run_local_app_10:
+	@gunicorn wsgi:app --bind 127.0.0.1:8000 --control-socket /tmp/gunicorn.ctl -w 10
+
 run_unix_nginx:
 	@nginx -g "daemon off;" -c ${PWD}/nginx/unix.conf
 
