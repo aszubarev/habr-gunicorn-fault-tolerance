@@ -1,0 +1,12 @@
+version: "3.6"
+services:
+  server:
+    user: "999:999"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:8000"
+    volumes:
+      - ./.volumes/tmp/:/tmp
+    read_only: true
